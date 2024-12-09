@@ -18,7 +18,7 @@ app.post("/payment/create", async (req, res) => {
       currency: "usd",
     });
     res.status(201).json({ clientSecret: paymentIntent.client_secret });
-    console.log(paymentIntent)
+    console.log(paymentIntent);
   } else {
     res.status(403).json({
       message: "total must be greater than 0",
